@@ -4,7 +4,7 @@ use solana_sdk::signature::Keypair;
 
 fn main() {
     // input regexp pattern here
-    let re = Regex::new(r"^(ring|rn|rg|rng)").unwrap();
+    let re = Regex::new(r"^(usd|one|ring|rn|rg|rng)").unwrap();
 
     // iterator
     let mut iter = 0;
@@ -19,6 +19,7 @@ fn main() {
             println!("Raw secret {:?}", keypair.to_bytes());
             println!("Secret: {:?}", keypair.secret());
             println!("Public: {}", public);
+            println!("==============================================");
         }
     }
 }
