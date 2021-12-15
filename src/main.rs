@@ -14,7 +14,7 @@ fn main() {
         let public = Pubkey::new(&keypair.to_bytes()[32..64]);
         iter += 1;
 
-        if re.is_match(&format!("{}", public)) {
+        if re.is_match(&(format!("{}", public)).to_lowercase()) {
             println!("Iteration: {}", iter);
             println!("Raw secret {:?}", keypair.to_bytes());
             println!("Secret: {:?}", keypair.secret());
